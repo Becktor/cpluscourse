@@ -1,0 +1,67 @@
+README for the final game framework
+-----------------------------------
+
+The goal of this framework is to integrate the work of all programming
+teams into our game "enigma3d". To make this possible, this framework
+provides the entire "infrastructure" of the game, so that each team
+has their own set of files they work on.
+
+ * For each student we have reserved one field number XXX according to
+   the file "Chart-of-fields" in the svn repository. (Please notify us
+   if you are not in the chart!) 
+
+ * When in a team you may use any of the numbers of the team
+   members. Group hand-in is allowed, but remember groups may have max
+   4 members!
+
+ * The following assumes you are working on field number XXX. The
+   files belonging to this field are called TXXX.cpp and TXXX.h.
+   *******************************************************************
+   YOU MUST NOT change any other files than the ones belonging to your
+   group, because otherwise the integration of the works is not
+   possible. 
+   *******************************************************************
+
+ * If any team has a problem integrating their work into the game by
+   changing only their TXX.cpp/.h, they MUST contact us; then we will
+   find a solution, in the worst case with that team's work not being
+   integrated with the rest.
+
+ * Please do look carefully through all the central files of the program and 
+   their comments to understand how the game works:
+   - game.cpp / game.h
+   - field.cpp / field.h 
+   - main.cpp
+
+   Please consider in particular the example fields we provide: T1--T4
+   These latter two are very much like how your TXXX.cpp/TXXX.h should
+   look like. You are welcome to copy any of the code from these existing 
+   files and re-use it in your TXXX.cpp/TXXX.h. 
+
+ * You see in the code, that the name of the class that team TXXX would
+   build is TXXX, and the unique identifier for that Field is tTXXX that
+   should return upon getFieldIdentifier(). You must not change that.
+
+ * Every group should write a level file (modifying
+   enigma3d.app/Contents/Resources/field.lvl) in which the own kind of
+   Field occurs. The field entry in the level file should simply be
+   the group number XXX.
+
+ * Before compiling look at the Makefile: check the system you are
+   building for and the path of irrlicht
+
+ * The first compile requires every of the 150 declared fields is
+   compiled, which takes quite some time. After that only modified
+   files will be compiled and that's faster.
+   
+ * FINAL SUBMISSION: send to your teaching favourite assistant:
+   - your TXXX.h 
+   - your TXXX.cpp 
+   - your field.lvl -- renamed to TXXX.lvl
+   - any textures/etc. your stone uses
+
+ * If your team works on more than one Field type, ask the teaching
+   assistants for reserving additional names/identifiers for you.
+
+ * MOST IMPORTANT: Any problems, clarifications, questions : contact us!!
+
